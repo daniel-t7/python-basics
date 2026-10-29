@@ -5,7 +5,7 @@ for n in range(count):
 
 # 2
 count = int(input("count = "))
-sum = 0;
+sum = 0
 for n in range(count):
     n = int(input("n = "))
     sum += n

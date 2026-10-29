@@ -1,7 +1,7 @@
 tasks = []
 
 
-def showTaks():
+def show_tasks():
     if not tasks:
         print("Списъкът е празен")
     for i, t in enumerate(tasks, 1):
@@ -21,16 +21,14 @@ while True:
         elif key.isdigit():
             print("Изтрихте:", tasks.pop(int(key) - 1))
     elif choice == "3":
-        showTaks()
+        show_tasks()
         index = input("Задача: ")
-        if index.isdigit() and 1 <= int(index) <= len(tasks):
-            tasks[int(index) - 1] = input("Нов текст: ").strip()
+        if index.isdigit():
+            tasks[int(index) - 1] = input("Нов текст: ")
 
     elif choice == "4":
-        showTaks()
+        show_tasks()
     elif choice == "0":
-        break;
+        break
     else:
         print("Това не от зададените числа.")
-
-
